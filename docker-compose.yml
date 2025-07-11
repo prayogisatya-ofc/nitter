@@ -24,6 +24,8 @@ services:
       - no-new-privileges:true
     cap_drop:
       - ALL
+    environment:
+      - DEBUG=false
 
   nitter-redis:
     image: redis:6-alpine
@@ -46,3 +48,4 @@ services:
 
 volumes:
   nitter-redis:
+
